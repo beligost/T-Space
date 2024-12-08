@@ -1,0 +1,50 @@
+.footer {
+    width: 100%;
+    height: 70px;
+    background-color: $interface-bg;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    &__container {
+        padding: 0 10px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+
+        &--small {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__message {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        padding: 11px 15px 10px 15px;
+        background-color: $interface-inp;
+        border-radius: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__inp {
+        width: 100%;
+        font-family: $Roboto;
+        font-size: rem(16);
+        line-height: 120%;
+        font-weight: 400;
+        color: $interface-elements;
+        background: none;
+        border: none;
+    }
+}

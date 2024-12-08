@@ -1,0 +1,30 @@
+.chat {
+    width: 100%;
+    height: calc(100vh - 140px);
+    background-color: $black;
+    background-image: url('../img/background.webp');
+    background-position: center bottom;
+    background-size: cover;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__message {
+        display: block;
+        height: 300px;
+        width: 100%;
+        background-color: $message-bg;
+        margin-bottom: 20px;
+    }
+}

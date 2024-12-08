@@ -1,0 +1,100 @@
+.message {
+    width: 100%;
+    display: flex;
+    font-family: $Roboto;
+    font-weight: 400;
+    line-height: 120%;
+    color: $message-text;
+    position: relative;
+    transition: opacity .8s ease;
+    opacity: 1;
+
+    &.animate-visible {
+        opacity: 0;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 17px;
+        height: 21px;
+        position: absolute;
+        background: url('/img/svg/message-tail.svg');
+        background-size: cover;
+        bottom: 0;
+    }
+
+    &--left {
+        justify-content: left;
+
+        &::before {
+            left: -5px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+
+    &--right {
+        justify-content: right;
+        margin-top: 20px;
+
+        &::before {
+            transform: scale(-1, 1);
+            right: -5px;
+        }
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+    
+    &__container {
+        display: inline-block;
+        background-color: $message-bg;
+        padding: 6px 12px;
+        border-radius: 10px;
+        max-width: 315px;
+    }
+
+    &__text {
+        display: inline-block;
+    }
+
+    &__footer {
+        text-align: right;
+    }
+
+    &__time {
+        font-size: rem(11);
+        font-weight: 400;
+        color: $message-time;
+    }
+}
+
+.question {
+    max-width: 315px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: opacity .8s ease;
+    opacity: 1;
+
+    &.animate-visible {
+        opacity: 0;
+    }
+
+    &__btn {
+        min-width: calc(50% - 5px);
+        font-family: $Roboto;
+        font-weight: 500;
+        font-size: rem(14);
+        background-color: $primary;
+        border-radius: 40px;
+        padding: 15px 25px;
+        color: $white;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
